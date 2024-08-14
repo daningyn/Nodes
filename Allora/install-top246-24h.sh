@@ -11,7 +11,7 @@ rm -rf basic-coin-prediction-node
 git clone https://github.com/allora-network/basic-coin-prediction-node
 cd basic-coin-prediction-node
 
-$model = "Y"
+model="Y"
 
 wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/app.py -O ~/basic-coin-prediction-node/app.py
 wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/main.py -O ~/basic-coin-prediction-node/main.py
