@@ -31,7 +31,7 @@ read -p "" backupwallet
 echo
 
 if [[ "$backupwallet" =~ ^[Yy]$ ]]; then
-    allorad keys add $1 --recover --keyring-backend 321321321
+    allorad keys add $1 --recover
     wait
 else
     allorad keys add $1
