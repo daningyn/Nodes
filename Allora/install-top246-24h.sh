@@ -6,10 +6,9 @@ DARK_YELLOW="\033[0;33m"
 CYAN="\033[0;36m"
 RESET="\033[0;32m"
 
-source $HOME/.bash_profile
-
 curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/main/install.sh | bash -s -- v0.3.0
-export PATH="$PATH:/root/.local/bin"
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bash_profile
+source ~/.bash_profile
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
 rm -rf allora-huggingface-walkthrough
