@@ -64,7 +64,7 @@ cat <<EOF > config.json
         {
             "topicId": 1,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 30,
+            "loopSeconds": 15,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "ETH"
@@ -73,7 +73,7 @@ cat <<EOF > config.json
         {
             "topicId": 2,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 40,
+            "loopSeconds": 10,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "ETH"
@@ -91,7 +91,7 @@ cat <<EOF > config.json
         {
             "topicId": 4,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 35,
+            "loopSeconds": 15,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "BTC"
@@ -100,7 +100,7 @@ cat <<EOF > config.json
         {
             "topicId": 5,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 45,
+            "loopSeconds": 12,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "SOL"
@@ -109,7 +109,7 @@ cat <<EOF > config.json
         {
             "topicId": 6,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 15,
+            "loopSeconds": 10,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "SOL"
@@ -127,7 +127,7 @@ cat <<EOF > config.json
         {
             "topicId": 8,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 35,
+            "loopSeconds": 9,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "BNB"
