@@ -8,6 +8,8 @@ RESET="\033[0;32m"
 
 source $HOME/.bash_profile
 
+curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/main/install.sh | bash -s -- v0.3.0
+
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
 rm -rf allora-huggingface-walkthrough
 git clone https://github.com/allora-network/allora-huggingface-walkthrough.git
@@ -60,27 +62,81 @@ cat <<EOF > config.json
         },
         "worker": [
             {
-                "topicId": 2,
+                "topicId": 1,
                 "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 5,
+                "loopSeconds": 30,
                 "parameters": {
                     "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                     "Token": "ETH"
                 }
             },
             {
-                "topicId": 4,
+                "topicId": 2,
                 "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 5,
+                "loopSeconds": 40,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "ETH"
+                }
+            },
+            {
+                "topicId": 3,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 20,
                 "parameters": {
                     "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                     "Token": "BTC"
                 }
             },
             {
+                "topicId": 4,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 35,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "BTC"
+                }
+            },
+            {
+                "topicId": 5,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 45,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "ETH"
+                }
+            },
+            {
                 "topicId": 6,
                 "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 5,
+                "loopSeconds": 15,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "SOL"
+                }
+            },
+            {
+                "topicId": 7,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 10,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "SOL"
+                }
+            },
+            {
+                "topicId": 8,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 35,
+                "parameters": {
+                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                    "Token": "SOL"
+                }
+            },
+            {
+                "topicId": 9,
+                "inferenceEntrypointName": "api-worker-reputer",
+                "loopSeconds": 40,
                 "parameters": {
                     "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                     "Token": "SOL"
