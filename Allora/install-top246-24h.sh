@@ -27,23 +27,16 @@ read -p "" backupwallet
 echo
 
 if [[ "$backupwallet" =~ ^[Yy]$ ]]; then
-    allorad keys add $1 --recover
+    allorad keys add $1 --recover --keyring-backend 321321321
     wait
 else
     allorad keys add $1
     wait
 fi
 
-
-echo
-echo -e "${BOLD}${DARK_YELLOW}Copy mnemonic phrase & paste here:${RESET}"
-allorad keys add $1 --recover --keyring-backend test
-echo
-wait
-
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Continuce config worker node...${RESET}"
 
-printf 'Copy mnemonic phrase testwallet & paste here: '
+printf 'Copy mnemonic phrase testwallet & paste here to set out config file: '
 read HEX
 
 if [ -f config.json ]; then
