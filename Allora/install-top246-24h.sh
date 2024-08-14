@@ -29,7 +29,11 @@ echo
 if [[ "$backupwallet" =~ ^[Yy]$ ]]; then
     allorad keys add $1 --recover
     wait
+else
+    allorad keys add $1
+    wait
 fi
+
 
 echo
 echo -e "${BOLD}${DARK_YELLOW}Copy mnemonic phrase & paste here:${RESET}"
