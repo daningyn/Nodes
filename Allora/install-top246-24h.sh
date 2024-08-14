@@ -9,6 +9,7 @@ RESET="\033[0;32m"
 source $HOME/.bash_profile
 
 curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/main/install.sh | bash -s -- v0.3.0
+export PATH="$PATH:/root/.local/bin"
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
 rm -rf allora-huggingface-walkthrough
