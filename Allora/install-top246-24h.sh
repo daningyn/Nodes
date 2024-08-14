@@ -7,16 +7,16 @@ CYAN="\033[0;36m"
 RESET="\033[0;32m"
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
-rm -rf basic-coin-prediction-node
-git clone https://github.com/allora-network/basic-coin-prediction-node
-cd basic-coin-prediction-node
+rm -rf allora-huggingface-walkthrough
+git clone https://github.com/allora-network/allora-huggingface-walkthrough.git
+cd allora-huggingface-walkthrough
 
-model="Y"
+# model="Y"
 
-wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/app.py -O ~/basic-coin-prediction-node/app.py
-wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/main.py -O ~/basic-coin-prediction-node/main.py
-wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/requirement.txt -O ~/basic-coin-prediction-node/requirements.txt
-wait
+# wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/app.py -O ~/basic-coin-prediction-node/app.py
+# wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/main.py -O ~/basic-coin-prediction-node/main.py
+# wget -q https://raw.githubusercontent.com/daningyn/Nodes/main/Allora/hugging-face/requirement.txt -O ~/basic-coin-prediction-node/requirements.txt
+# wait
 
 echo
 
@@ -36,15 +36,14 @@ fi
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Continuce config worker node...${RESET}"
 
-printf 'Copy mnemonic phrase testwallet & paste here to set out config file: '
+printf 'Copy mnemonic phrase & paste here to set out config file: '
 read HEX
 
 if [ -f config.json ]; then
     rm config.json
     echo "Removed existing config.json file."
 fi
-if [[ "$model" =~ ^[Yy]$ ]]; then
-    cat <<EOF > config.json
+cat <<EOF > config.json
     {
         "wallet": {
             "addressKeyName": "${$1}",
@@ -88,4 +87,3 @@ if [[ "$model" =~ ^[Yy]$ ]]; then
         ]
     }
     EOF
-fi
