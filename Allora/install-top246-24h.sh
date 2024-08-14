@@ -103,7 +103,7 @@ cat <<EOF > config.json
             "loopSeconds": 45,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                "Token": "ETH"
+                "Token": "SOL"
             }
         },
         {
@@ -121,7 +121,7 @@ cat <<EOF > config.json
             "loopSeconds": 10,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                "Token": "SOL"
+                "Token": "ETH"
             }
         },
         {
@@ -130,7 +130,7 @@ cat <<EOF > config.json
             "loopSeconds": 35,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                "Token": "SOL"
+                "Token": "BNB"
             }
         },
         {
@@ -139,7 +139,7 @@ cat <<EOF > config.json
             "loopSeconds": 40,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                "Token": "SOL"
+                "Token": "ARB"
             }
         }
     ]
