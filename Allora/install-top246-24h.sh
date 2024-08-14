@@ -6,6 +6,8 @@ DARK_YELLOW="\033[0;33m"
 CYAN="\033[0;36m"
 RESET="\033[0;32m"
 
+source $HOME/.bash_profile
+
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
 rm -rf allora-huggingface-walkthrough
 git clone https://github.com/allora-network/allora-huggingface-walkthrough.git
