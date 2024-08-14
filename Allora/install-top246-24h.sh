@@ -136,7 +136,7 @@ cat <<EOF > config.json
         {
             "topicId": 9,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 40,
+            "loopSeconds": 7,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "ARB"
