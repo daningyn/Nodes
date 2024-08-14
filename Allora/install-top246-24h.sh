@@ -48,100 +48,100 @@ if [ -f config.json ]; then
     echo "Removed existing config.json file."
 fi
 cat <<EOF > config.json
-    {
-        "wallet": {
-            "addressKeyName": "${$1}",
-            "addressRestoreMnemonic": "${HEX}",
-            "alloraHomeDir": "",
-            "gas": "1000000",
-            "gasAdjustment": 1.0,
-            "nodeRpc": "https://sentries-rpc.testnet-1.testnet.allora.network/",
-            "maxRetries": 1,
-            "delay": 1,
-            "submitTx": false
-        },
-        "worker": [
-            {
-                "topicId": 1,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 30,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "ETH"
-                }
-            },
-            {
-                "topicId": 2,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 40,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "ETH"
-                }
-            },
-            {
-                "topicId": 3,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 20,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "BTC"
-                }
-            },
-            {
-                "topicId": 4,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 35,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "BTC"
-                }
-            },
-            {
-                "topicId": 5,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 45,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "ETH"
-                }
-            },
-            {
-                "topicId": 6,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 15,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "SOL"
-                }
-            },
-            {
-                "topicId": 7,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 10,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "SOL"
-                }
-            },
-            {
-                "topicId": 8,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 35,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "SOL"
-                }
-            },
-            {
-                "topicId": 9,
-                "inferenceEntrypointName": "api-worker-reputer",
-                "loopSeconds": 40,
-                "parameters": {
-                    "InferenceEndpoint": "http://inference:8000/inference/{Token}",
-                    "Token": "SOL"
-                }
+{
+    "wallet": {
+        "addressKeyName": "$1",
+        "addressRestoreMnemonic": "${HEX}",
+        "alloraHomeDir": "",
+        "gas": "1000000",
+        "gasAdjustment": 1.0,
+        "nodeRpc": "https://sentries-rpc.testnet-1.testnet.allora.network/",
+        "maxRetries": 1,
+        "delay": 1,
+        "submitTx": false
+    },
+    "worker": [
+        {
+            "topicId": 1,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 30,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
             }
-        ]
-    }
-    EOF
+        },
+        {
+            "topicId": 2,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 40,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 3,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 20,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 4,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 35,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 5,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 45,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 6,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 15,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 7,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 10,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 8,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 35,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 9,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 40,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        }
+    ]
+}
+EOF
