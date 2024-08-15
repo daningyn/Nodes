@@ -170,7 +170,7 @@ cat <<EOF > config-both.json
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "SOL"
             }
-        }
+        },
         {
             "topicId": 7,
             "inferenceEntrypointName": "api-worker-reputer",
